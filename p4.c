@@ -114,6 +114,11 @@ int main(int argc, char* argv[]){
     return 0;
 }
 
+/*
+ * This method adds each identifier to the linked list
+ * @param fp: The input file
+ */
+
 void add(FILE *fp){
   char lines[81];
   char iden[11];
@@ -135,6 +140,12 @@ void add(FILE *fp){
        }
    }
 }
+
+/* This method creates and inserts a node in the linked list pointed by
+ * head.
+ * @param word : The identifier of the node
+ */
+
 void ins(char *word, int num){
      PNODE temp, currentPtr;
      int inserted = F;
@@ -171,6 +182,10 @@ void ins(char *word, int num){
     }
 }
 
+/*
+ * This program prints the cross reference table in the output file
+ */
+
 void pr1() {
     PNODE temp = head;
     int i;
@@ -206,6 +221,12 @@ void pr1() {
     }
   }
  
+/*
+ * This function finds out how many times the identifier is used
+ * inside the mal file
+ * @param fp: The name of the file
+ * @param temp: A pointer to the node
+ */
 
 void search(FILE *fp, PNODE temp){
   rewind(fp);
